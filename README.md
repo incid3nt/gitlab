@@ -134,8 +134,16 @@ root@gitlab:/srv/gitlab-runner/config# docker run -d --name gitlab-runner --rest
 - скриншоты с успешно собранными сборками.
 ---
 1.1 Запушьте репозиторий на GitLab, изменив origin. Это изучалось на занятии по Git.
-
-
+Добавим репозиторий:
+```
+git remote add gitlab git@192.168.1.23:oleg/gitlab.git
+```
+запушим:
+```
+git push gitlab main
+```
+![скрин](https://github.com/incid3nt/gitlab/blob/main/screen/Code_l06qqpt3SS.png)
+![скрин](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_ylhjF2JxZ4.png)
 
 ---
 
