@@ -63,6 +63,8 @@ Gitlab установлен
 1.2 Создайте новый проект и пустой репозиторий в нём.
 ![Репозиторий](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_oRq4LZiU0g.png)
 ![Репозиторий](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_pqkO34xCxE.png)
+1.3 Зарегистрируйте gitlab-runner для этого проекта и запустите его в режиме Docker. Раннер можно регистрировать и запускать на той же виртуальной машине, на которой запущен GitLab.
+
 ### Задание 2
 
 `Что нужно сделать:`
