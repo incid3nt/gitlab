@@ -42,6 +42,18 @@ sudo bash /tmp/script.deb.sh
 ```
 sudo apt install gitlab-ce
 ```
+Настроим конфиг.файл:
+```
+sudo nano /etc/gitlab/gitlab.rb
+```
+В строке external_url укажем наш IP адрес для gitlab:
+```
+external_url ‘http://192.168.1.23’
+```
+Обновим конфигурацию:
+```
+sudo gitlab-ctl reconfigure
+```
 ### Задание 2
 
 `Приведите ответ в свободной форме........`
