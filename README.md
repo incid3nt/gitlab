@@ -16,7 +16,8 @@
 В качестве ответа в репозиторий шаблона с решением добавьте скриншоты с настройками раннера в проекте.
 
 ---
-1.1 Обновим пакеты:
+1.1 Разворачиваем GITLAB локально:
+Обновим пакеты:
 ```
 sudo apt update
 sudo apt upgrade
@@ -59,6 +60,9 @@ Gitlab установлен
 ![служба](https://github.com/incid3nt/gitlab/blob/main/screen/putty_8yLs8pIumF.png)
 
 ![браузер](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_ewTHKGtmFK.png)
+1.2 Создайте новый проект и пустой репозиторий в нём.
+![Репозиторий](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_oRq4LZiU0g.png)
+![Репозиторий](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_pqkO34xCxE.png)
 ### Задание 2
 
 `Что нужно сделать:`
