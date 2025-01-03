@@ -167,6 +167,7 @@ build:
    tags:
     - yandex
 ```   
+![скрин](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_D0M5P17NMr.png)
 ---
 
 ### Задание 3
