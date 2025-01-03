@@ -133,7 +133,7 @@ root@gitlab:/srv/gitlab-runner/config# docker run -d --name gitlab-runner --rest
 - файл gitlab-ci.yml для своего проекта или вставьте код в соответствующее поле в шаблоне;
 - скриншоты с успешно собранными сборками.
 ---
-1.1 Запушьте репозиторий на GitLab, изменив origin. Это изучалось на занятии по Git.
+2.1 Запушьте репозиторий на GitLab, изменив origin. Это изучалось на занятии по Git.
 Добавим репозиторий:
 ```
 git remote add gitlab git@192.168.1.23:oleg/gitlab.git
@@ -144,7 +144,27 @@ git push gitlab main
 ```
 ![скрин](https://github.com/incid3nt/gitlab/blob/main/screen/Code_l06qqpt3SS.png)
 ![скрин](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_ylhjF2JxZ4.png)
+2.2 
+.gitlab-ci.yml
+```
+stages:
+  - test
+  - build
 
+test:
+  stage: test
+  image: golang:1.17
+  script: 
+   - go test .
+  tags:
+    - yandex
+
+build:
+  stage: build
+  image: docker:latest
+  script:
+   - docker build .
+```   
 ---
 
 ### Задание 3
