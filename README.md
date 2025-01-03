@@ -60,9 +60,11 @@ Gitlab установлен
 ![служба](https://github.com/incid3nt/gitlab/blob/main/screen/putty_8yLs8pIumF.png)
 
 ![браузер](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_ewTHKGtmFK.png)
+---
 1.2 Создайте новый проект и пустой репозиторий в нём.
 ![Репозиторий](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_oRq4LZiU0g.png)
 ![Репозиторий](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_pqkO34xCxE.png)
+---
 1.3 Зарегистрируйте gitlab-runner для этого проекта и запустите его в режиме Docker. Раннер можно регистрировать и запускать на той же виртуальной машине, на которой запущен GitLab.
 Регистрация раннера:
 ```bash
@@ -77,7 +79,6 @@ Gitlab установлен
     volumes = ["/cache", "/var/run/docker.sock:/var/run/docker.sock"]
     extra_hosts = ["gitlab.localdomain:192.168.56.10"]
 ```
-
 Запуск:
 ```bash
    docker run -d --name gitlab-runner --restart always \
@@ -86,6 +87,7 @@ Gitlab установлен
      -v /var/run/docker.sock:/var/run/docker.sock \
      gitlab/gitlab-runner:latest
 ```
+--- 
 ```bash
 root@gitlab:/srv/gitlab-runner/config# docker run -ti --rm --name gitlab-runner \
      --network host \
@@ -121,7 +123,9 @@ root@gitlab:/srv/gitlab-runner/config# docker run -d --name gitlab-runner --rest
      gitlab/gitlab-runner:latest
 0206a87a1402ed6e6cef72c2bd02b8a1746164342759258595a253e90c7c82fd
 ```
+---
 ![runner](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_znjKIBHSUp.png)
+---
 ### Задание 2
 
 `Что нужно сделать:`
@@ -132,6 +136,7 @@ root@gitlab:/srv/gitlab-runner/config# docker run -d --name gitlab-runner --rest
 - В качестве ответа в шаблон с решением добавьте:
 - файл gitlab-ci.yml для своего проекта или вставьте код в соответствующее поле в шаблоне;
 - скриншоты с успешно собранными сборками.
+---
 ```
 Поле для вставки кода...
 ....
