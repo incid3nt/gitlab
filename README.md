@@ -72,6 +72,21 @@ Gitlab установлен
      -v /var/run/docker.sock:/var/run/docker.sock \
      gitlab/gitlab-runner:latest register
 ```
+Конфигурация раннера для docker-in-docker:
+```yaml
+    volumes = ["/cache", "/var/run/docker.sock:/var/run/docker.sock"]
+    extra_hosts = ["gitlab.localdomain:192.168.56.10"]
+```
+
+Запуск:
+```bash
+   docker run -d --name gitlab-runner --restart always \
+     --network host \
+     -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+     -v /var/run/docker.sock:/var/run/docker.sock \
+     gitlab/gitlab-runner:latest
+```
+
 ### Задание 2
 
 `Что нужно сделать:`
