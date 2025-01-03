@@ -64,7 +64,14 @@ Gitlab установлен
 ![Репозиторий](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_oRq4LZiU0g.png)
 ![Репозиторий](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_pqkO34xCxE.png)
 1.3 Зарегистрируйте gitlab-runner для этого проекта и запустите его в режиме Docker. Раннер можно регистрировать и запускать на той же виртуальной машине, на которой запущен GitLab.
-
+Регистрация раннера:
+```bash
+   docker run -ti --rm --name gitlab-runner \
+     --network host \
+     -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+     -v /var/run/docker.sock:/var/run/docker.sock \
+     gitlab/gitlab-runner:latest register
+```
 ### Задание 2
 
 `Что нужно сделать:`
