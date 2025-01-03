@@ -121,7 +121,7 @@ root@gitlab:/srv/gitlab-runner/config# docker run -d --name gitlab-runner --rest
      gitlab/gitlab-runner:latest
 0206a87a1402ed6e6cef72c2bd02b8a1746164342759258595a253e90c7c82fd
 ```
-
+![runner](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_znjKIBHSUp.png)
 ### Задание 2
 
 `Что нужно сделать:`
