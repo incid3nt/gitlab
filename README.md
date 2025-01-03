@@ -164,6 +164,8 @@ build:
   image: docker:latest
   script:
    - docker build .
+   tags:
+    - yandex
 ```   
 ---
 
