@@ -21,6 +21,27 @@
 sudo apt update
 sudo apt upgrade
 ```
+Установим зависимости, которые необходимы для работы:
+```
+sudo apt install -y curl ssh openssh-server ca-certificates tzdata perl
+```
+Перейдите в директорию tmp:
+```
+cd \tmp
+```
+Затем загрузим в нее скрипт установки:
+```
+curl -LO https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh
+
+```
+запускаем скрипт:
+```
+sudo bash /tmp/script.deb.sh
+```
+Установим GITLAB
+```
+sudo apt install gitlab-ce
+```
 ### Задание 2
 
 `Приведите ответ в свободной форме........`
