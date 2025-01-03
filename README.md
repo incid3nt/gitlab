@@ -133,6 +133,7 @@ root@gitlab:/srv/gitlab-runner/config# docker run -d --name gitlab-runner --rest
 - файл gitlab-ci.yml для своего проекта или вставьте код в соответствующее поле в шаблоне;
 - скриншоты с успешно собранными сборками.
 ---
+1.1 Запушьте репозиторий на GitLab, изменив origin. Это изучалось на занятии по Git.
 
 
 
