@@ -86,6 +86,41 @@ Gitlab установлен
      -v /var/run/docker.sock:/var/run/docker.sock \
      gitlab/gitlab-runner:latest
 ```
+```
+root@gitlab:/srv/gitlab-runner/config# docker run -ti --rm --name gitlab-runner \
+     --network host \
+     -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+     -v /var/run/docker.sock:/var/run/docker.sock \
+     gitlab/gitlab-runner:latest register
+Runtime platform                                    arch=amd64 os=linux pid=7 revision=3153ccc6 version=17.7.0
+Running in system-mode.
+
+Enter the GitLab instance URL (for example, https://gitlab.com/):
+http://192.168.1.23
+Enter the registration token:
+GR1348941K6ZpP-65VhQDe_Lfhr1E
+Enter a description for the runner:
+[gitlab]:
+Enter tags for the runner (comma-separated):
+yandex
+Enter optional maintenance note for the runner:
+
+WARNING: Support for registration tokens and runner parameters in the 'register' command has been deprecated in GitLab Runner 15.6 and will be replaced with support for authentication tokens. For more information, see https://docs.gitlab.com/ee/ci/runners/new_creation_workflow
+Registering runner... succeeded                     runner=GR1348941K6ZpP-65
+Enter an executor: ssh, virtualbox, docker, docker-windows, docker-autoscaler, instance, custom, shell, parallels, docker+machine, kubernetes:
+docker
+Enter the default Docker image (for example, ruby:2.7):
+golang:1.17
+Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
+
+Configuration (with the authentication token) was saved in "/etc/gitlab-runner/config.toml"
+root@gitlab:/srv/gitlab-runner/config# docker run -d --name gitlab-runner --restart always \
+     --network host \
+     -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+     -v /var/run/docker.sock:/var/run/docker.sock \
+     gitlab/gitlab-runner:latest
+0206a87a1402ed6e6cef72c2bd02b8a1746164342759258595a253e90c7c82fd
+```
 
 ### Задание 2
 
