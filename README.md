@@ -55,7 +55,9 @@ external_url ‘http://192.168.1.23’
 sudo gitlab-ctl reconfigure
 ```
 Gitlab установлен
+
 ![служба](https://github.com/incid3nt/gitlab/blob/main/screen/putty_8yLs8pIumF.png)`
+![браузер](https://github.com/incid3nt/gitlab/blob/main/screen/chrome_ewTHKGtmFK.png)`
 ### Задание 2
 
 `Приведите ответ в свободной форме........`
